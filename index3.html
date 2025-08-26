@@ -1,17 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <hr>
-    <h1>MY FIRST WEB </h1>
-    <hr>
-     <p> HI MY SELF PATEL DHYEY </p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DHAMO's Luxe HTML Academy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #1e3c72, #2a5298);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
 
-<h2>WELCOME TO MY NEW WEB</h2>
-<h3>NICE TO MEET YOU</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jCVjudmnByk?si=qN7mvO84jpcIcH2e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> INDIA'S NO 1 TRENDING MUSIC VIDEO
+    h1 {
+      margin-top: 60px;
+      font-size: 3em;
+      animation: fadeSlide 2s ease-out forwards;
+      opacity: 0;
+      text-align: center;
+    }
 
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ball {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #ff6f61, #ffcc70);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite cubic-bezier(.28,.84,.42,1);
+      box-shadow: 0 0 20px rgba(255, 111, 97, 0.6);
+    }
+
+    @keyframes bounce {
+      0%, 100% { top: 100px; }
+      50% { top: 300px; }
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffcc70;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: slideUp 1s ease-out;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #ffcc70;
+      margin-bottom: 10px;
+    }
+
+    p, ul, pre {
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    pre {
+      background: #00000033;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+
+    .social-links {
+      margin: 60px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      animation: fadeIn 2s ease-in-out 1s forwards;
+      opacity: 0;
+    }
+
+    .social-links a {
+      color: #fff;
+      font-size: 2em;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #ffcc70;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    #editor {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    #output {
+      margin-top: 20px;
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffcc70;
+      color: #1e3c72;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.5em;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
+
+  <h1>Welcome to DHAMO's Luxe HTML Academy 🚀</h1>
+  <div class="ball"></div>
+
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#tags">Tags</a>
+    <a href="#forms">Forms</a>
+    <a href="#tables">Tables</a>
+    <a href="#media">Media</a>
+    <a href="#editor">Live Editor</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <section id="intro">
+
     
+    <h2>📘 What is HTML?</h2>
+    <p>HTML (HyperText Markup Language) is the backbone of every website. It defines the structure of web pages using elements like headings, paragraphs, links, images, and more.</p>
+  </section>
+
+  <section id="tags">
+    <h2>🔤 Basic Tags</h2>
+    <ul>
+      <li><code>&lt;h1&gt; to &lt;h6&gt;</code> — Headings</li>
+      <li><code>&lt;p&gt;</code> — Paragraph</li>
+      <li><code>&lt;a&gt;</code> — Link</li>
+      <li><code>&lt;img&gt;</code> — Image</li>
+      <li><code>&lt;br&gt;</code> — Line break</li>
+    </ul>
+  </section>
+
+  <section id="forms">
+    <h2>📝 Forms</h2>
+    <pre>
+&lt;form&gt;
+  &lt;input type="text" placeholder="Your Name"&gt;
+  &lt;input type="email" placeholder="Email"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+  </section>
+
+  <section id="tables">
+    <h2>📊 Tables</h2>
+    <pre>
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;DHAMO&lt;/td&gt;&lt;td&gt;21&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+  </section>
+
+  <section id="media">
+    <h2>🎥 Media Elements</h2>
+    <pre>
+&lt;img src="car.jpg" alt="Car"&gt;
+&lt;audio controls src="sound.mp3"&gt;&lt;/audio&gt;
+&lt;video controls src="video.mp4"&gt;&lt;/video&gt;
+    </pre>
+  </section>
+
+  <section id="editor">
+  <h2>💻 Try HTML Live</h2>
+  <textarea id="codeInput" rows="6" style="
+    width: 80%;
+    max-width: 600px;
+    height: 150px;
+    resize: vertical;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffcc70;
+    border: 2px solid #ffcc70;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 0 10px rgba(255, 204, 112, 0.4);
+  "></textarea>
+
+  <button onclick="runCode()" style="
+    margin-top: 10px;
+    background: #2a5298;
+    color: #ffcc70;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 204, 112, 0.4);
+  ">Run Code</button>
+
+  <div id="output" style="
+    margin-top: 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  "></div>
+</section>
+
+  <section id="quiz">
+    <h2>🧠 Quick Quiz</h2>
+    <p>Which tag is used to create a hyperlink?</p>
+    <ul>
+      <li><input type="radio" name="q1"> &lt;p&gt;</li>
+      <li><input type="radio" name="q1"> &lt;a&gt;</li>
+      <li><input type="radio" name="q1"> &lt;img&gt;</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 DHAMO's Luxe HTML Academy. Keep coding and keep cruising!
+  </footer>
+
+  <div class="social-links">
+    <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+    <a href="https://www.facebook.com/mikeypatel" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/_dhamopatel_10" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    
+        <a href="mailto:patel.dhyey.cg@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑
+  </button>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById("codeInput").value;
+      document.getElementById("output").innerHTML = code;
+    }
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OtakuVerse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #444;
+    }
+    .logo {
+      font-size: 2rem;
+      color: #ff0055;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff0055;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .hero-characters {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .character {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 15px #ff0055;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-size: 1.2rem;
+    }
+    .character:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ff0055;
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .content-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #ffcc00;
+    }
+
+    .anime-grid, .character-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .anime-card, .character-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 0 10px #00ffee;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .anime-card:hover, .character-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00ffee;
+    }
+
+    .manga-preview img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ffcc00;
+      margin-bottom: 10px;
+    }
+    .manga-preview p {
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-top: 1px solid #444;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">OtakuVerse</div>
+    <nav>
+      <ul>
+        <li><a href="#anime">Anime</a></li>
+        <li><a href="#manga">Manga</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to OtakuVerse</h1>
+    <p>Stream anime, read manga, and meet your favorite heroes in motion.</p>
+    <div class="hero-characters">
+      <div class="character goku">🔥 Goku</div>
+      <div class="character luffy">🌊 Luffy</div>
+      <div class="character levi">⚔️ Levi</div>
+    </div>
+  </section>
+
+  <!-- Anime Section -->
+  <section id="anime" class="content-section">
+    <h2>🔥 Trending Anime</h2>
+    <div class="anime-grid">
+      <div class="anime-card">Jujutsu Kaisen</div>
+      <div class="anime-card">One Piece</div>
+      <div class="anime-card">Attack on Titan</div>
+    </div>
+  </section>
+
+  <!-- Manga Section -->
+  <section id="manga" class="content-section">
+    <h2>📚 Latest Manga</h2>
+    <div class="manga-preview">
+      <img src="manga-panel.jpg" alt="Manga Panel" />
+      <p>Read chapter 1 of <strong>Chainsaw Man</strong></p>
+    </div>
+  </section>
+
+  <!-- Character Showcase -->
+  <section id="characters" class="content-section">
+    <h2>🎭 Character Showcase</h2>
+    <div class="character-gallery">
+      <div class="character-card">Goku</div>
+      <div class="character-card">Luffy</div>
+      <div class="character-card">Levi</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by DHAMO</p>
+    <p>Follow: @_dhamopatel_10 | Gmail: patel.dhyey.cg@gmail.com | FB: Mikey Patel</p>
+  </footer>
+</body>
+</html>
