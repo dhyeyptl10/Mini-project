@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .highlight {
+            background-color: #dbeafe; /* A light blue highlight */
+            color: #1e40af; /* A darker blue text color */
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-4xl">
+        <!-- Header with Navigation -->
+        <header class="border-b pb-2 mb-8">
+            <nav>
+                <div class="flex space-x-4 text-blue-600">
+                    <a href="#" class="hover:underline">home</a>
+                    <a href="#" class="hover:underline">about us</a>
+                    <a href="#" class="hover:underline">contact us</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main content of the page -->
+        <main>
+            <h1 class="text-4xl font-bold mb-6">HTML tutorial</h1>
+
+            <!-- Article for the main tutorial content -->
+            <article>
+                <!-- Introduction Section -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Introduction to HTML</h2>
+                    <p class="text-base leading-relaxed">
+                        <span class="highlight font-semibold rounded-md px-2 py-1">&gt;HTML (HyperText Markup Language)</span> is the standard language for creating web pages and web applications. It provides the structure and content of a webpage, allowing you to define elements such as headings, paragraphs, links, images, and more.
+                    </p>
+                </section>
+
+                <!-- Basic Structure Section -->
+                <section class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">Basic Structure of an HTML Document</h2>
+                    <p class="text-base leading-relaxed mb-4">
+                        An HTML document consists of various elements, each represented by tags. The basic structure includes:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-base">
+                        <li><strong>&lt;!DOCTYPE html&gt;:</strong> Declares the document type and version of HTML.</li>
+                        <li><strong>&lt;html&gt;:</strong> The root element that wraps the entire HTML document.</li>
+                        <li><strong>&lt;head&gt;:</strong> Contains meta-information about the document, such as the title, character set, and links to stylesheets or scripts.</li>
+                        <li><strong>&lt;body&gt;:</strong> Contains the visible content of the webpage, including text, images, links, and other elements.</li>
+                    </ul>
+                </section>
+            </article>
+
+            <!-- Aside for tangentially related content like an advertisement -->
+            <aside>
+                <h2 class="text-2xl font-bold mb-4">advertisement</h2>
+                <p class="text-base leading-relaxed text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, obcaecati. Dolore consequatur laboriosam fuga, praesentium provident beatae itaque mollitia fugiat?
+                </p>
+            </aside>
+        </main>
+
+        <!-- Footer for copyright or contact info -->
+        <footer class="border-t mt-8 pt-4 text-center text-gray-500">
+            <p>&copy; 2024 HTML Tutorial. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
